@@ -1,0 +1,11 @@
+mnistdb helper tool to work with "the mnist database"
+For additional info look at https://yann.lecun.com/exdb/mnist/
+
+cli arguments:
+    --help (-h) to print this message
+    --train to use train (default) dataset (train-images.idx3-ubyte + train-labels.idx1-ubyte)
+    --test to use test dataset (t10k-images.idx3-ubyte + t10k-labels.idx1-ubyte)
+    --out (-o) chose directory to output images (make sure that "out" directory is created)
+    --index (-i) chose image by index to extract
+
+If you don't specify an image index, all images will be extracted
