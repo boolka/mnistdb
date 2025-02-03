@@ -1,0 +1,16 @@
+mnistcli is helper tool to work with "the mnist database"
+For additional info look at https://yann.lecun.com/exdb/mnist/
+
+cli arguments:
+    --train to use train (default) dataset (train-images.idx3-ubyte + train-labels.idx1-ubyte)
+    --test to use test dataset (t10k-images.idx3-ubyte + t10k-labels.idx1-ubyte)
+    --out (-o) chose directory to output images (make sure the directory exists)
+    --extract (-e) extract train or test database
+    --index (-i) chose image by index to extract
+    --help (-h) to print this message
+
+Suppose we want to extract all test images to "test_out" directory:
+    ./mnistcli -e --test -o test_out
+Or we want to extract image by index 1000 from train db to "train_out" directory:
+    ./mnistcli -e --train -o train_out -i 1000
+And so on
