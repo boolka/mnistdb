@@ -1,0 +1,24 @@
+extractor is a helper tool to work with the MNIST database
+
+There are two datasets: train and test.
+Select them with the --train or --test flags.
+By default, extractor dumps the raw database files.
+To extract PNG images instead, use the --png flag.
+If you use the --index flag, only the image with that index will be extracted.
+Specify the output directory with the --dir flag.
+
+CLI arguments:
+    --train       Use the train dataset (default) (train-images.idx3-ubyte + train-labels.idx1-ubyte)
+    --test        Use the test dataset (t10k-images.idx3-ubyte + t10k-labels.idx1-ubyte)
+    --png         Extract PNG digit images instead of the raw database files
+    --dir, -d     Directory to output images (ensure the directory exists)
+    --index, -i   Extract only the image with the given index
+    --help, -h    Print this message
+
+Examples:
+    Dump train database (with corresponding labels) to the train directory:
+        ./extractor --train -d train
+    Extract all test images to the test directory:
+        ./extractor --test --png -d test
+    Extract image with index 1000 from the train dataset to train directory:
+        ./extractor --train --png -i 1000 -d train
